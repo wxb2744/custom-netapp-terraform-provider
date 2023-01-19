@@ -16,7 +16,7 @@ type configStruct struct {
 	AWSProfile         string
 	AWSProfileFilePath string
 	AzureAuthMethods   []string
-	ConnectorHost      string	
+	ConnectorHost      string
 }
 
 // Client is the main function to connect to the APi
@@ -75,7 +75,7 @@ func (c *configStruct) clientFun() (*Client, error) {
 		} else {
 			client.CloudManagerHost = fmt.Sprintf("https://%s", c.ConnectorHost)
 		}
-	}	
+	}
 
 	if c.Simulator {
 		client.SetSimulator(c.Simulator)

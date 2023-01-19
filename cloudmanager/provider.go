@@ -22,7 +22,7 @@ func Provider() terraform.ResourceProvider {
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("CONNECTOR_HOST", nil),
 				Description: "Connector Host when not using BlueXP.",
-			},			
+			},
 			"environment": {
 				Type:        schema.TypeString,
 				Optional:    true,
