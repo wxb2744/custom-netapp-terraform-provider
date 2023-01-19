@@ -3,6 +3,7 @@ package cloudmanager
 import (
 	"fmt"
 	"log"
+	"strings"
 )
 
 // Config is a struct for user input
