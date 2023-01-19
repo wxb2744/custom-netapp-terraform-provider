@@ -37,7 +37,7 @@ func (c *Client) Do(baseURL string, hostType string, token string, paramsNil boo
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
-	c.httpClient := &http.Client{Transport: tr}	
+	httpClient := &http.Client{Transport: tr}	
 
 	if hostType == "CloudManagerHost" {
 		host = c.CloudManagerHost
@@ -61,7 +61,7 @@ func (c *Client) Do(baseURL string, hostType string, token string, paramsNil boo
 	if err != nil {
 		return statusCode, res, onCloudRequestID, err
 	}
-	httpRes, err := c.httpClient.Do(httpReq)
+	httpRes, err := httpClient.Do(httpReq)
 	if err != nil {
 		log.Print("HTTP req failed")
 		return statusCode, res, onCloudRequestID, err
