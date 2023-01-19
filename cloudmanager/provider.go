@@ -17,6 +17,12 @@ func Provider() terraform.ResourceProvider {
 				DefaultFunc: schema.EnvDefaultFunc("CLOUDMANAGER_REFRESH_TOKEN", nil),
 				Description: "The refresh_token for OCCM operations.",
 			},
+			"connector_host": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				DefaultFunc: schema.EnvDefaultFunc("CONNECTOR_HOST", nil),
+				Description: "Connector Host when not using BlueXP.",
+			},			
 			"environment": {
 				Type:        schema.TypeString,
 				Optional:    true,
