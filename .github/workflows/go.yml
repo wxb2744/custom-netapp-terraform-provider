@@ -31,8 +31,8 @@ jobs:
       run: |
         dir .
         dir ..
-        dir %GOPATH%
-        dir %GOPATH%\bin
+        dir $GOPATH
+        dir $GOPATH\bin
         
     - name: Upload artifact
       uses: actions/upload-artifact@v3
