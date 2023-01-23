@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: terraform-provider-netapp-cloudmanager
-        path: D:\a\custom-netapp-terraform-provider\tmp\tmp\terraform-provider-netapp-cloudmanager.exe
+        path: D:\a\custom-netapp-terraform-provider\tmp\terraform-provider-netapp-cloudmanager.exe
