@@ -20,17 +20,15 @@ jobs:
       uses: actions/setup-go@v3
       with:
         go-version: 1.19
+        cache: true        
 
     - name: Build
       run: |
-        mkdir ../tmp
+        mkdir ..\tmp
         go build -o ../tmp/ -v ./...
-
-    - name: list files
-      run: dir ../tmp
         
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: terraform-provider-netapp-cloudmanager
-        path: ../tmp/terraform-provider-netapp-cloudmanager.exe
+        path: D:\a\custom-netapp-terraform-provider\tmp\tmp\terraform-provider-netapp-cloudmanager.exe
