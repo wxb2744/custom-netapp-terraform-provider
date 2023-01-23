@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: |
         mkdir ../tmp
-        go build -o ../tmp/terraform-provider-netapp-cloudmanager.exe -v ./...
+        go build -o ../tmp/ -v ./...
 
     - name: list files
       run: dir ../tmp
