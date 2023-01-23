@@ -27,3 +27,8 @@ jobs:
     - name: Test
       run: go test -v ./...
 
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: terraform-provider-netapp-cloudmanager
+        path: terraform-provider-netapp-cloudmanager.exe
