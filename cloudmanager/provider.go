@@ -114,6 +114,9 @@ func providerConfigure(d *schema.ResourceData) (interface{}, error) {
 	if v, ok := d.GetOk("aws_profile_file_path"); ok {
 		config.AWSProfileFilePath = v.(string)
 	}
+	if v, ok := d.GetOk("connector_host"); ok {
+		config.ConnectorHost = v.(string)
+	}	
 	if v, ok := d.GetOk("azure_auth_methods"); ok {
 		// a bit complicated, as the type is only known at runtime
 		intMethods := v.([]interface{})
