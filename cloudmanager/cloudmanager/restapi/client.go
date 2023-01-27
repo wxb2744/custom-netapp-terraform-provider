@@ -1,7 +1,6 @@
 package restapi
 
 import (
-	"crypto/tls"
 	"errors"
 	"io/ioutil"
 	"log"
@@ -34,11 +33,6 @@ func (c *Client) Do(baseURL string, hostType string, token string, paramsNil boo
 	res = nil
 	onCloudRequestID := ""
 	gcpType := false
-
-	tr := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-	}
-	httpClient := &http.Client{Transport: tr}
 
 	if hostType == "CloudManagerHost" {
 		host = c.CloudManagerHost
