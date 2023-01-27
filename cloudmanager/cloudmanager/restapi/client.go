@@ -56,7 +56,7 @@ func (c *Client) Do(baseURL string, hostType string, token string, paramsNil boo
 	if err != nil {
 		return statusCode, res, onCloudRequestID, err
 	}
-	httpRes, err := httpClient.Do(httpReq)
+	httpRes, err := c.httpClient.Do(httpReq)
 	if err != nil {
 		log.Print("HTTP req failed")
 		return statusCode, res, onCloudRequestID, err
