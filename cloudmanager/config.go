@@ -72,7 +72,7 @@ func (c *configStruct) clientFun() (*Client, error) {
 		if strings.HasPrefix(c.ConnectorHost, "https://") {
 			client.CloudManagerHost = c.ConnectorHost
 		} else if strings.HasPrefix(c.ConnectorHost, "http://") {
-			return &Client{}, fmt.Errorf("not using unsecure connector: %s", c.ConnectorHost)
+			client.CloudManagerHost = c.ConnectorHost
 		} else {
 			client.CloudManagerHost = fmt.Sprintf("https://%s", c.ConnectorHost)
 		}
