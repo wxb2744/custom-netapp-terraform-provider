@@ -39,7 +39,7 @@ func resourceCVOAzure() *schema.Resource {
 			},
 			"saas_subscription_id": {
 				Type: 	schema.TypeString,
-				Required: false,
+				Optional: true,
 				ForceNew: true,
 			},
 			"workspace_id": {
